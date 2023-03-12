@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo CRUD App</title>
+</head>
+<body>
+    <!-- Navigation Area -->
+    <div id="navigation-area" class="navigation-area">
+        <h1 id="main-heading">Todo CRUD App</h1>
+        <div class="navigation" id="navigation">
+            <div class="left-side">
+                <h3 class="sub-heading-one">Task Lists</h3>
+            </div>
+            <div class="right-side">
+                <select id="timing" class="timing">
+                    <option value="Today" selected>Today</option>
+                    <option value="Upcoming">Upcoming</option>
+                </select>
+                <button><i class="fa-solid fa-square-plus"></i> Add Text</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Form Area -->
+    <div class="form-area">
+        <form id="form" class="add">
+            <div class="form-inputs">
+                <label for="task-name">Task</label>
+                <input type="text" id="task-name">
+                <label for="task-category">Category</label>
+                <input type="text" id="task-category">
+                <label for="task-deadline">Deadline</label>
+                <input type="date" id="task-deadline">
+                <label for="task-importance">Importance</label>
+                <input type="checkbox" id="task-importance">
+            </div>
+            <div class="form-controls">
+                <input type="submit" value="Add">
+                <input type="submit" value="Update">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </div>
+    
+    <!-- Main Area -->
+    <div id="main-area" class="main-area">
+        <table class="table">
+            <tr>
+                <th>Task</th>
+                <th>Category</th>
+                <th>Deadline</th>
+            </tr>
+            <div class="list-items">
+                <tr class="list-item" draggable="true">
+                    <td>React</td>
+                    <td>Coding</td>
+                    <td>22 May , 2023</td>
+                </tr>
+                <tr class="list-item" draggable="true">
+                    <td>TypeScript</td>
+                    <td>Learning</td>
+                    <td>22 May , 2023</td>
+                </tr>
+                <tr class="list-item" draggable="true">
+                    <td>Engineering</td>
+                    <td>Youtube</td>
+                    <td>22 May , 2023</td>
+                </tr>
+            </div>
+        </table>
+    </div>
+
+    <!-- Important Task Area -->
+
+    <div id="important-task-area" class="important-task-area">
+        <div class="important-list-item">
+            <div class="date-time">
+                <span class="date">20</span>
+                <span class="month">May</span>
+            </div>
+            <div class="title-deadline">
+                <p class="title">React</p>
+                <p class="deadline-timing">Today</p>
+            </div>
+        </div>
+        <div class="important-list-item">
+            <div class="date-time">
+                <span class="date">20</span>
+                <span class="month">May</span>
+            </div>
+            <div class="title-deadline">
+                <p class="title">React</p>
+                <p class="deadline-timing">Today</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

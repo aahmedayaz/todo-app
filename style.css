@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+/* Navigation Area */
+
+.navigation-area{
+    width: 100%;
+    background-color: brown;
+    text-align: center;
+}
+
+.navigation-area #main-heading{
+    padding: 20px;
+}

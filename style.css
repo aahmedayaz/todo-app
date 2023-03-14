@@ -49,12 +49,12 @@ body{
 .navigation .right-side select{
     font-size: 14px;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 8px 15px;
 }
 
 .navigation .right-side button{
     color: white;
-    padding: 8px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     background-color: rgb(86, 20, 102);
     font-size: 14px;
@@ -173,3 +173,121 @@ body{
     color: rgb(99, 99, 99);
     background-color: white !important;
 }
+
+/* Main Table Area */
+
+.main-area{
+    width: 70%;
+    margin: 25px auto;
+}
+
+.main-area table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+}
+
+td{
+    padding: 10px;
+    max-width: 375px;
+    max-height: 100px;
+    border-bottom: 1px solid #dddddd;
+}
+
+td:nth-last-child(1){
+    color: rgb(236, 88, 88);
+    cursor: pointer;
+    text-align: center;
+}
+
+td:nth-last-child(2){
+    color: rgb(48, 155, 114);
+    cursor: pointer;
+    text-align: center;
+}
+
+td:nth-last-child(1):hover{
+    background-color: rgb(236, 88, 88);
+    color: #ffffff;
+}
+
+td:nth-last-child(2):hover{
+    background-color: rgb(48, 155, 114);
+    color: #ffffff;
+}
+
+td:nth-last-child(1):active{
+    transform: scale(0.95);
+}
+
+td:nth-last-child(2):active{
+    transform: scale(0.95);
+}
+
+tr th {
+    text-align: left;
+    background-color: #efff5e;
+    font-size: 22px;
+    padding: 10px;
+}
+
+/* Important task Area */
+
+.important-task-area{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.important-task-area > h2 {
+    margin-bottom: 10px;
+    align-self: flex-start;
+    font-size: 24px;
+    color: rgb(46, 196, 113);
+}
+
+.important-task-area .important-list-item{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.important-task-area .important-list-item .date-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Tilt Warp', cursive !important;
+}
+
+.important-task-area .important-list-item .date-time .date{
+    color: rgb(92, 0, 128);
+}
+
+.important-task-area .important-list-item .title-deadline{
+    border: 2px solid rgb(134, 134, 134);
+    width: 700px;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+.important-task-area .important-list-item .title-deadline .title{
+    font-size: 22px;
+}
+
+.important-task-area .important-list-item .title-deadline .deadline-timing{
+    font-size: 12px;
+}
+

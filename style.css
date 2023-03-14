@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Tilt+Warp&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,16 +8,168 @@
 
 body{
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Navigation Area */
 
 .navigation-area{
+    z-index: 2;
     width: 100%;
-    background-color: brown;
+    /* background-color: brown; */
     text-align: center;
 }
 
 .navigation-area #main-heading{
-    padding: 20px;
+    font-size: 42px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Tilt Warp', cursive !important; 
+    color: rgb(86, 20, 102);
+}
+
+.navigation {
+    border-top: 5px double #949494;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .left-side .sub-heading-one{
+    font-size: 25px;
+}
+
+.navigation > div:nth-child(odd) {
+    margin-left: 20px;
+}
+
+.navigation .right-side select{
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.navigation .right-side button{
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: rgb(86, 20, 102);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.navigation .right-side button:active{
+    transform: scale(0.95);
+}
+
+.navigation > div:nth-child(even) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+/* Form Area */
+
+.form-area {
+    display: none;
+    font-family: sans-serif;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border: 2px solid #c7c7c7;
+    border-radius: 15px;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.form-area #form{
+    display: flex;
+    flex-direction: column;
+}
+
+#form.add #updateTaskBtn{
+    display: none;
+}
+
+#form.update #addTaskBtn{
+    display: none;
+}
+
+.form-area #form .form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.form-area #form .form-inputs label {
+    font-size: 18px;
+    color: #000000;
+}
+
+.form-area #form .form-inputs input{
+    margin-bottom: 15px;
+}
+
+.form-area #form .form-inputs input[type = "text"] {
+    width: 400px;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 1px solid #b4b4b4;
+}
+
+.form-area #form .form-inputs input[type = "date"]{
+    padding: 10px;
+}
+
+.form-area #form .form-inputs > div{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-area #form .form-inputs > div > label{
+    margin-right: 15px;
+}
+
+.form-area #form .form-inputs > div > input{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.form-area #form .form-controls{
+    margin-top: 25px;
+    align-self: flex-end;
+}
+
+.form-area #form .form-controls input{
+    color: white;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(86, 20, 102);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-area #form .form-controls input:active{
+    transform: scale(0.95);
+}
+
+.form-area #form .form-controls input[type = 'reset']{
+    border: 1px solid rgb(99, 99, 99);
+    color: rgb(99, 99, 99);
+    background-color: white !important;
 }

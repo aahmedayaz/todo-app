@@ -21,7 +21,7 @@
                     <option value="Today" selected>Today</option>
                     <option value="Upcoming">Upcoming</option>
                 </select>
-                <button><i class="fa-solid fa-square-plus"></i> Add Text</button>
+                <button><i class="fa-solid fa-square-plus"></i> &nbspAdd Task</button>
             </div>
         </div>
     </div>
@@ -36,12 +36,14 @@
                 <input type="text" id="task-category">
                 <label for="task-deadline">Deadline</label>
                 <input type="date" id="task-deadline">
-                <label for="task-importance">Importance</label>
-                <input type="checkbox" id="task-importance">
+                <div>
+                    <label for="task-importance">Importance</label>
+                    <input type="checkbox" id="task-importance">
+                </div>
             </div>
             <div class="form-controls">
-                <input type="submit" value="Add">
-                <input type="submit" value="Update">
+                <input type="submit" value="Add" id="addTaskBtn">
+                <input type="submit" value="Update" id="updateTaskBtn">
                 <input type="reset" value="Cancel">
             </div>
         </form>

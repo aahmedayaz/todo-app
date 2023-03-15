@@ -73,6 +73,18 @@ body{
     margin-right: 20px;
 }
 
+/* Overlay */
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
 /* Form Area */
 
 .form-area {
@@ -188,6 +200,10 @@ body{
     font-size: 16px;
 }
 
+.main-area table tbody tr:nth-child(even){
+    background-color: #ececec;
+}
+
 td{
     padding: 10px;
     max-width: 375px;
@@ -198,13 +214,11 @@ td{
 td:nth-last-child(1):not(.notFound){
     color: rgb(236, 88, 88);
     cursor: pointer;
-    text-align: center;
 }
 
 td:nth-last-child(2){
     color: rgb(48, 155, 114);
     cursor: pointer;
-    text-align: center;
 }
 
 td:nth-last-child(1):not(.notFound):hover{

@@ -76,6 +76,7 @@ body{
 /* Form Area */
 
 .form-area {
+    background-color: #ffffff;
     display: none;
     font-family: sans-serif;
     width: auto;
@@ -99,7 +100,7 @@ body{
     display: none;
 }
 
-#form.update #addTaskBtn{
+#form.update #confirmAddTaskBtn{
     display: none;
 }
 
@@ -194,7 +195,7 @@ td{
     border-bottom: 1px solid #dddddd;
 }
 
-td:nth-last-child(1){
+td:nth-last-child(1):not(.notFound){
     color: rgb(236, 88, 88);
     cursor: pointer;
     text-align: center;
@@ -206,7 +207,7 @@ td:nth-last-child(2){
     text-align: center;
 }
 
-td:nth-last-child(1):hover{
+td:nth-last-child(1):not(.notFound):hover{
     background-color: rgb(236, 88, 88);
     color: #ffffff;
 }
@@ -216,7 +217,7 @@ td:nth-last-child(2):hover{
     color: #ffffff;
 }
 
-td:nth-last-child(1):active{
+td:nth-last-child(1):not(.notFound):active{
     transform: scale(0.95);
 }
 

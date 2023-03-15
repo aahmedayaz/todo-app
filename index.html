@@ -21,13 +21,13 @@
                     <option value="Today" selected>Today</option>
                     <option value="Upcoming">Upcoming</option>
                 </select>
-                <button><i class="fa-solid fa-square-plus"></i> &nbspAdd Task</button>
+                <button id="addTaskBtn"><i class="fa-solid fa-square-plus"></i> &nbspAdd Task</button>
             </div>
         </div>
     </div>
 
     <!-- Input Form Area -->
-    <div class="form-area">
+    <div class="form-area" id="form-area">
         <form id="form" class="add">
             <div class="form-inputs">
                 <label for="task-name">Task</label>
@@ -42,9 +42,9 @@
                 </div>
             </div>
             <div class="form-controls">
-                <input type="submit" value="Add" id="addTaskBtn">
+                <input type="submit" value="Add" id="confirmAddTaskBtn">
                 <input type="submit" value="Update" id="updateTaskBtn">
-                <input type="reset" value="Cancel">
+                <input type="reset" value="Cancel" id="resetTaskBtn">
             </div>
         </form>
     </div>
@@ -56,11 +56,14 @@
                 <th>Task</th>
                 <th>Category</th>
                 <th>Deadline</th>
-                <th></th>
-                <th></th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
             <div class="list-items">
-                <tr class="list-item" draggable="true">
+                <tr>
+                    <td class="notFound" colspan="5" style="text-align: center; font-size: 25px;">No Task Found</td>
+                </tr>
+                <!-- <tr class="list-item" draggable="true">
                     <td>React</td>
                     <td>Coding Practise</td>
                     <td>24 March , 2023</td>
@@ -80,16 +83,17 @@
                     <td>10 June , 2024</td>
                     <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
                     <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
-                </tr>
+                </tr> -->
             </div>
         </table>
     </div>
-
+    
     <!-- Important Task Area -->
-
+    
     <div id="important-task-area" class="important-task-area">
         <h2 class="important-task-area-main-heading"><i class="fa-sharp fa-solid fa-skull-crossbones"></i> &nbspUpcoming Deadlines</h2>
-        <div class="important-list-item">
+        <span style="align-self: flex-start;">No Upcoming Deadlines Found</span>
+        <!-- <div class="important-list-item">
             <div class="date-time">
                 <span class="date">18</span>
                 <span class="month">March</span>
@@ -108,7 +112,7 @@
                 <p class="title">React</p>
                 <p class="deadline-timing">Category : Coding Practise</p>
             </div>
-        </div>
+        </div> -->
     </div>
     
     <script src="./script.js"></script>

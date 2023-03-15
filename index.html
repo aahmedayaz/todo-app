@@ -26,6 +26,9 @@
         </div>
     </div>
 
+
+    <!-- For Background Blur -->
+    <div class="overlay"></div>
     <!-- Input Form Area -->
     <div class="form-area" id="form-area">
         <form id="form" class="add">
@@ -37,8 +40,8 @@
                 <label for="task-deadline">Deadline</label>
                 <input type="date" id="task-deadline">
                 <div>
-                    <label for="task-importance">Importance</label>
-                    <input type="checkbox" id="task-importance">
+                    <label for="task-status">Completed</label>
+                    <input type="checkbox" id="task-status">
                 </div>
             </div>
             <div class="form-controls">
@@ -56,17 +59,18 @@
                 <th>Task</th>
                 <th>Category</th>
                 <th>Deadline</th>
-                <th>Update</th>
-                <th>Delete</th>
+                <th>Completion Status</th>
+                <th colspan="2">Edit/Delete</th>
             </tr>
-            <div class="list-items">
+            <tbody class="list-items" id="list-items">
                 <tr>
-                    <td class="notFound" colspan="5" style="text-align: center; font-size: 25px;">No Task Found</td>
+                    <td class="notFound" colspan="6" style="text-align: center; font-size: 25px;">No Task Found</td>
                 </tr>
                 <!-- <tr class="list-item" draggable="true">
                     <td>React</td>
                     <td>Coding Practise</td>
                     <td>24 March , 2023</td>
+                    <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
                     <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
                     <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr>
@@ -74,6 +78,7 @@
                     <td>TypeScript</td>
                     <td>Project Making</td>
                     <td>18 March , 2023</td>
+                    <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
                     <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
                     <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr>
@@ -81,10 +86,11 @@
                     <td>University</td>
                     <td>Degree</td>
                     <td>10 June , 2024</td>
+                    <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
                     <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
                     <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr> -->
-            </div>
+            </tbody>
         </table>
     </div>
     

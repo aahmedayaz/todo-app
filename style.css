@@ -130,16 +130,25 @@ body{
 
 .form-area #form .form-inputs input{
     margin-bottom: 15px;
+    border: 1px solid #b4b4b4;
+}
+
+.form-area #form .form-inputs input.invalid{
+    border-color: rgb(255, 83, 83) !important;
+}
+
+.form-area #form .form-inputs input.valid{
+    border-color: #b4b4b4 !important;
 }
 
 .form-area #form .form-inputs input[type = "text"] {
     width: 400px;
     font-size: 18px;
     padding: 10px 15px;
-    border: 1px solid #b4b4b4;
 }
 
 .form-area #form .form-inputs input[type = "date"]{
+    outline: none;
     padding: 10px;
 }
 
@@ -255,9 +264,17 @@ tr th {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 10px;
+}
+
+.important-task-area .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 8px;
 }
 
 .important-task-area > h2 {
@@ -269,8 +286,9 @@ tr th {
 
 .important-task-area .important-list-item{
     width: 100%;
+    overflow: hidden;
     display: flex;
-    gap: 15px;
+    gap: 5px;
 }
 
 .important-task-area .important-list-item .date-time{
@@ -289,7 +307,7 @@ tr th {
 
 .important-task-area .important-list-item .title-deadline{
     border: 2px solid rgb(134, 134, 134);
-    width: 700px;
+    width: 800px;
     max-height: 100px;
     display: flex;
     flex-direction: column;
@@ -300,6 +318,7 @@ tr th {
 
 .important-task-area .important-list-item .title-deadline .title{
     font-size: 22px;
+    font-weight: bolder;
 }
 
 .important-task-area .important-list-item .title-deadline .deadline-timing{

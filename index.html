@@ -17,9 +17,10 @@
                 <h3 class="sub-heading-one"><i class="fa-solid fa-bars"></i> &nbspTask Lists</h3>
             </div>
             <div class="right-side">
-                <select id="timing" class="timing">
-                    <option value="Today" selected>Today</option>
-                    <option value="Upcoming">Upcoming</option>
+                <select id="timing" class="timing" name="sortinglist">
+                    <option value="all" selected>All </option>
+                    <option value="today">Today</option>
+                    <option value="upcoming">Upcoming</option>
                 </select>
                 <button id="addTaskBtn"><i class="fa-solid fa-square-plus"></i> &nbspAdd Task</button>
             </div>
@@ -34,9 +35,9 @@
         <form id="form" class="add">
             <div class="form-inputs">
                 <label for="task-name">Task</label>
-                <input type="text" id="task-name">
+                <input type="text" id="task-name" autocomplete="off">
                 <label for="task-category">Category</label>
-                <input type="text" id="task-category">
+                <input type="text" id="task-category" autocomplete="off">
                 <label for="task-deadline">Deadline</label>
                 <input type="date" id="task-deadline">
                 <div>
@@ -59,36 +60,36 @@
                 <th>Task</th>
                 <th>Category</th>
                 <th>Deadline</th>
-                <th>Completion Status</th>
+                <th>Status</th>
                 <th colspan="2">Edit/Delete</th>
             </tr>
             <tbody class="list-items" id="list-items">
                 <tr>
                     <td class="notFound" colspan="6" style="text-align: center; font-size: 25px;">No Task Found</td>
                 </tr>
-                <!-- <tr class="list-item" draggable="true">
+                <!-- <tr class="list-item" draggable="true" data-index = 0>
                     <td>React</td>
                     <td>Coding Practise</td>
                     <td>24 March , 2023</td>
                     <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
-                    <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
-                    <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
+                    <td class='updateBtn'><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
+                    <td class='deleteBtn'><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr>
-                <tr class="list-item" draggable="true">
+                <tr class="list-item" draggable="true" data-index = 1>
                     <td>TypeScript</td>
                     <td>Project Making</td>
                     <td>18 March , 2023</td>
                     <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
-                    <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
-                    <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
+                    <td class='updateBtn'><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
+                    <td class='deleteBtn'><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr>
-                <tr class="list-item" draggable="true">
+                <tr class="list-item" draggable="true" data-index = 2>
                     <td>University</td>
                     <td>Degree</td>
                     <td>10 June , 2024</td>
                     <td><i class="fa-solid fa-xmark"></i> &nbspNot Completed</td>
-                    <td><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
-                    <td><i class="fa-solid fa-trash"></i> &nbspDelete</td>
+                    <td class='updateBtn'><i class="fa-sharp fa-solid fa-hammer"></i> &nbspUpdate</td>
+                    <td class='deleteBtn'><i class="fa-solid fa-trash"></i> &nbspDelete</td>
                 </tr> -->
             </tbody>
         </table>
@@ -98,27 +99,29 @@
     
     <div id="important-task-area" class="important-task-area">
         <h2 class="important-task-area-main-heading"><i class="fa-sharp fa-solid fa-skull-crossbones"></i> &nbspUpcoming Deadlines</h2>
-        <span style="align-self: flex-start;">No Upcoming Deadlines Found</span>
-        <!-- <div class="important-list-item">
-            <div class="date-time">
-                <span class="date">18</span>
-                <span class="month">March</span>
+        <div class="container" id="container">
+            <span style="align-self: flex-start;">No Upcoming Deadlines Found</span>
+            <!-- <div class="important-list-item">
+                <div class="date-time">
+                    <span class="date">18</span>
+                    <span class="month">March</span>
+                </div>
+                <div class="title-deadline">
+                    <p class="title">TypeScript</p>
+                    <p class="deadline-timing">Category : Project Making</p>
+                </div>
             </div>
-            <div class="title-deadline">
-                <p class="title">TypeScript</p>
-                <p class="deadline-timing">Category : Project Making</p>
-            </div>
+            <div class="important-list-item">
+                <div class="date-time">
+                    <span class="date">24</span>
+                    <span class="month">March</span>
+                </div>
+                <div class="title-deadline">
+                    <p class="title">React</p>
+                    <p class="deadline-timing">Category : Coding Practise</p>
+                </div>
+            </div> -->
         </div>
-        <div class="important-list-item">
-            <div class="date-time">
-                <span class="date">24</span>
-                <span class="month">March</span>
-            </div>
-            <div class="title-deadline">
-                <p class="title">React</p>
-                <p class="deadline-timing">Category : Coding Practise</p>
-            </div>
-        </div> -->
     </div>
     
     <script src="./script.js"></script>

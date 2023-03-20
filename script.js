@@ -285,7 +285,7 @@ let sortingTasks = (e) => {
             if(new Date(item.deadline).getFullYear() >= new Date().getFullYear()){
                 if(new Date(item.deadline).getMonth() >= new Date().getMonth()){
                    if(new Date(item.deadline).getMonth() == new Date().getMonth()){
-                        if(new Date(item.deadline).getDate() == new Date().getDate()){
+                        if(new Date(item.deadline).getDate() <= new Date().getDate()){
                             return 0;
                         }
                         if(new Date(item.deadline).getDate() > new Date().getDate()){
